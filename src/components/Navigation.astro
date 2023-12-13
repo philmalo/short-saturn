@@ -1,0 +1,28 @@
+---
+import Link from './Link.astro';
+---
+
+<Link
+id="home"
+href="/"
+dataset="~"
+title="~"
+/>
+<Link
+id="whoami"
+href="/about"
+dataset="whoami"
+title="À propos de moi"
+/>
+<Link
+id="lynx"
+href="/demos"
+dataset={`lynx ${import.meta.env.baseURL}`}
+title="Démos"
+/>
+<Link
+id="npm-contributors"
+href="/contact"
+dataset="npm view npm contributors"
+title="Contact"
+/>

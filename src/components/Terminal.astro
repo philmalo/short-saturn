@@ -1,0 +1,28 @@
+---
+interface Props {
+    command: string;
+}
+const { command } = Astro.props;
+---
+
+<p class="code">me@my-name-lol-dev:~$ </p>
+
+<script define:vars={{command}}>
+    function typewriter(command) {
+        const outputElement = document.querySelector('.code');
+        outputElement.classList.add('paused');
+        
+        let index = 0;
+        const typingInterval = setInterval(() => {
+            if (index < command.length) {
+                outputElement.innerHTML += command.charAt(index);
+                index++;
+            } else {
+                clearInterval(typingInterval);
+                outputElement.classList.remove('paused');
+            }
+        }, Math.random() * (40 - 30) + 10);
+    }
+
+    typewriter(command);
+</script>

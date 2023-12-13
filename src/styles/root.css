@@ -1,0 +1,7 @@
+:root {
+    /* colors */
+    --terminal-color : rgb(74,246,38);
+
+    /* spacing */
+    --gutters-main : 30px;
+}

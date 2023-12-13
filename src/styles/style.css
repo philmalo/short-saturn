@@ -1,0 +1,52 @@
+html, pre {
+    font-family: "JetBrainsMono", sans-serif;
+    color: var(--terminal-color);
+}
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+
+/* ================================ HEADER ================================ */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+    height: 10dvh;
+    margin-inline: var(--gutters-main);
+}
+header>div{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+header>div>h1 {
+    margin-bottom: unset;
+}
+header>div>h2 {
+    margin-top: unset;
+}
+a {
+    color: var(--terminal-color);
+    border: 1px solid var(--terminal-color);
+    padding-inline: 10px;
+    padding-block: 5px;
+    text-decoration: none;
+}
+
+
+/* ================================= MAIN ================================= */
+main {
+    flex-grow: 1;
+}
+
+
+/* ================================ FOOTER ================================ */
+footer {
+    display: flex;
+    justify-content: center;
+}

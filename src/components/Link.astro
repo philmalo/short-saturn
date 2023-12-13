@@ -1,0 +1,12 @@
+---
+interface Props {
+	id: string;
+	href: string;
+	dataset: string;
+	title: string;
+}
+
+const { id, href, dataset, title } = Astro.props;
+---
+
+<a id={id} href={href} data-link={dataset}>{title}</a>
