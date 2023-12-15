@@ -1,28 +1,30 @@
 ---
 import Link from './Link.astro';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+interface LinkProps {
+    id?: string;
+    href?: string;
+    dataset?: string;
+    label?: string;
+}
+
+interface Props {
+    links: LinkProps[];
+}
+
+const { links }: Props = Astro.props;
 ---
 
-<Link
-id="home"
-href="/"
-dataset="~"
-title="~"
-/>
-<Link
-id="whoami"
-href="/about"
-dataset="whoami"
-title="À propos de moi"
-/>
-<Link
-id="lynx"
-href="/demos"
-dataset={`lynx ${import.meta.env.baseURL}`}
-title="Démos"
-/>
-<Link
-id="npm-contributors"
-href="/contact"
-dataset="npm view npm contributors"
-title="Contact"
-/>
+{links.map(link =>(
+    <Link
+    id={link.id}
+    href={translatePath(link.href)}
+    dataset={link.dataset}
+    label={t(link.label)}
+    />
+))}

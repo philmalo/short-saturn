@@ -3,10 +3,10 @@ interface Props {
 	id: string;
 	href: string;
 	dataset: string;
-	title: string;
+	label: string;
 }
 
-const { id, href, dataset, title } = Astro.props;
+const { id, href, dataset, label } = Astro.props;
 ---
 
-<a id={id} href={href} data-link={dataset}>{title}</a>
+<a id={id} href={href} data-link={dataset}>{label}</a>

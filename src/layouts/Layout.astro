@@ -1,83 +1,30 @@
 ---
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
-
 import '../styles/import.css';
 import { ViewTransitions } from 'astro:transitions';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-let firstRun = true;
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+const currentYear = new Date().getFullYear();
+---
 
-const text = `<header>
-    <div>
-        <h1>My Name lol</h1>
-        <h2>Web Dev</h2>
-    </div>
-    <nav>
-        <a href="/about">À propos</a>
-        <a href="/demos">Démos</a>
-        <a href="/contact">Contact</a>
-    </nav>
-</header>
-<main>
-    <p class="code">me@my-name-lol-dev:~$ </p>
-</main>
-<footer>
-    <p>2023 My Name lol</p>
-	</footer>`;
-	
-	console.log(firstRun);
-	---
-	
-	<!doctype html>
-	<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<ViewTransitions/>
-		</head>
-		<body class="crt">
-			{firstRun?
-				<pre class="code"></pre>
-				:
-				<Header/>
-				<slot />
-				<Footer/>
-			}
-			</body>
-			</html>
-
-<script define:vars={{text}}>
-	const firstLoadOutputElement = document.querySelector('pre.code');
-	function typeWriter2(outputElement, text, index) {
-		outputElement.classList.add('paused');
-
-		if (index < text.length) {
-			const typingDelay = Math.random() * (40 - 30) + 10;
-
-			outputElement.innerHTML += text.charAt(index);
-			index++;
-
-			setTimeout(() => {
-				
-				if(firstRun && index >= text.length) {
-					outputElement.classList.remove('paused');
-					firstRun = false;
-					return Astro.redirect('/');
-				}
-				else {
-					typeWriter2(outputElement, text, index);
-				}
-			}, typingDelay);
-		}
-	}
-typeWriter2(firstLoadOutputElement, text, 0);
-</script>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Astro description" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+	<link rel="icon" type="image/svg+xml" href="/terminal_icon.svg" />
+	<title>{title}</title>
+	<ViewTransitions/>
+</head>
+<body class="crt">
+	<Header/>
+	<slot />
+	<Footer year={currentYear}/>
+</body>
+</html>

@@ -1,4 +1,5 @@
 ---
+import LanguagePicker from './LanguagePicker.astro';
 import Navigation from './Navigation.astro';
 ---
 
@@ -7,7 +8,17 @@ import Navigation from './Navigation.astro';
         <h1>My Name</h1>
         <h2>Web Dev</h2>
     </div>
-    <nav>
-        <Navigation/>
-    </nav>
+    <div>
+        <nav>
+            <Navigation links={[
+            { href: "/home/", dataset: "~", label: "nav.home" },
+            { href: "/about/", dataset: "whoami", label: "nav.about" },
+            { href: "/demos/", dataset: "lynx https://philippemalo.dev/", label: "nav.demos" },
+            { href: "/contact/", dataset: "npm view npm contributors", label: "nav.contact"},
+            ]} />
+        </nav>
+        <nav class="lang">
+            <LanguagePicker />
+        </nav>
+    </div>
 </header>

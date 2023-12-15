@@ -2,17 +2,13 @@
 import Card from "./Card.astro";
 ---
 <style>
-    section {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content:space-around;
-    }
+
 </style>
-<section>
-    <Card
-    href="https://deez.my.name.lol.dev/"
-    title="Final college project"
-    body="Project built with Louis Roby and Émile Daigneault. A mobile-first web app to manage one's wine collection/cellars"
-    />
+<section class="demos" transition:persist>
+    <Card cards={[
+        { link:"https://deez.my.name.lol.dev/", title:"Final college project", body:"Project built with Louis Roby and Émile Daigneault. A mobile-first web app to manage one's wine collection/cellars" },
+        { link:"https://deez.my.name.lol.dev/", title:"Final college project", body:"Project built with Louis Roby and Émile Daigneault. A mobile-first web app to manage one's wine collection/cellars" },
+        { link:"https://deez.my.name.lol.dev/", title:"Final college project", body:"Project built with Louis Roby and Émile Daigneault. A mobile-first web app to manage one's wine collection/cellars" },
+        { link:"https://deez.my.name.lol.dev/", title:"Final college project", body:"Project built with Louis Roby and Émile Daigneault. A mobile-first web app to manage one's wine collection/cellars" },
+    ]} />
 </section>

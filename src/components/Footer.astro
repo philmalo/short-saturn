@@ -1,6 +1,10 @@
 ---
+interface Props {
+    year: number;
+}
+const { year } = Astro.props;
 ---
 
-<footer class="">
-    <p>2023 My Name Lol</p>
+<footer>
+    <p>{year} Philippe Malo</p>
 </footer>

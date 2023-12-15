@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Terminal from '../../components/Terminal.astro';
+
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<Layout title={t("title.home")}>
+    <main class="">
+		<Terminal
+            command="cd ~"
+            origin=".home"
+            displayContent="block"
+        />
+        <p class="home" transition:persist>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ut, doloribus rerum placeat nulla aut? Consequuntur, repudiandae. Deleniti minus tenetur libero nisi voluptatibus distinctio similique repellendus neque consequuntur repudiandae odit natus aliquid qui provident iure aperiam ullam nobis enim sapiente, ratione esse fugiat? Qui non delectus eaque voluptatibus laboriosam tempore?</p>
+    </main>
+</Layout>

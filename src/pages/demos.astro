@@ -2,12 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 import Terminal from '../components/Terminal.astro';
 import Result from '../components/Result.astro';
+
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
-<Layout title="Mes projets">
-    <main class="">
+<Layout title={t("title.demos")}>
+    <main>
 		<Terminal
-            command="lynx https://deez.my.name.lol.dev/"
+            command="lynx https://philippemalo.dev/"
+            origin=".demos"
+            displayContent="flex"
         />
         <Result/>
     </main>

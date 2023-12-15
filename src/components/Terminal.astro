@@ -1,25 +1,51 @@
 ---
 interface Props {
     command: string;
+    origin: string;
+    displayContent: string;
 }
-const { command } = Astro.props;
+const { command, origin, displayContent } = Astro.props;
 ---
 
-<p class="code">me@my-name-lol-dev:~$ </p>
+<p>me@philippemalo.dev:~$ <span class="code" transition:persist></span></p>
 
-<script define:vars={{command}}>
+<script define:vars={{command, origin, displayContent}}>
+// const navigationButtons = document.querySelectorAll("a");
+
+//     // Itération à travers chaque élément <a> pour ajouter un écouteur d'événements
+//     navigationButtons.forEach(button => {
+//         button.addEventListener('click', (e) => {
+//             // Récupération de la valeur de l'attribut data-link de l'élément actuel
+//             const linkData = e.currentTarget.dataset.link;
+//             console.log("linkData", linkData)
+//             console.log("command", command)
+//             // Comparaison avec la variable command
+//             if (linkData === command) {
+//                 console.log("same?", command)
+//                 // Exécution de la fonction typewriter() si les valeurs correspondent
+//                 typewriter(command);
+//             }
+//         });
+//     });
+
     function typewriter(command) {
         const outputElement = document.querySelector('.code');
+        console.log("test", outputElement)
+        outputElement.innerText = "";
         outputElement.classList.add('paused');
         
         let index = 0;
         const typingInterval = setInterval(() => {
             if (index < command.length) {
-                outputElement.innerHTML += command.charAt(index);
+                outputElement.innerText += command.charAt(index);
                 index++;
-            } else {
+            } else if(index >= command.length){
                 clearInterval(typingInterval);
                 outputElement.classList.remove('paused');
+                const originElement = document.querySelector(origin);
+                setTimeout(()=> {   
+                    originElement.style.display = displayContent
+                }, 300)
             }
         }, Math.random() * (40 - 30) + 10);
     }

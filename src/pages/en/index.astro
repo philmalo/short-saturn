@@ -1,25 +1,64 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
----
-
-<Layout title="Philippe Malo">
-    <pre class="code"></pre>
-    <header class="hidden">
+const text = `<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippe Malo</title>
+</head>
+<body>
+    <header>
         <div>
-            <h1>Philippe Malo</h1>
+            <h1>My Name lol</h1>
             <h2>Web Dev</h2>
         </div>
         <nav>
+            <a href="/home">~</a>
+            <a href="/about">À propos</a>
+            <a href="/demos">Démos</a>
+            <a href="/contact">Contact</a>
         </nav>
     </header>
-    <main class="hidden">
-        <p class="response"></p>
+    <main>
+        <p class="code">me@philippemalo.dev:~$ </p>
     </main>
-    <footer class="hidden">
+    <footer>
         <p>2023 Philippe Malo</p>
     </footer>
-	<script>
-		import '../../scripts/script.js';
-	</script>
+</body>
+</html>`;
+---
+<Layout title="My Name">
+
+    <pre class="code"></pre>
 </Layout>
+
+<script is:inline define:vars={{text}}>
+    document.querySelector('header').classList.add('hidden')
+    document.querySelector('footer').classList.add('hidden')
+	const firstLoadOutputElement = document.querySelector('pre.code');
+	function typeWriter2(outputElement, text, index) {
+		outputElement.classList.add('paused');
+
+		if (index < text.length) {
+			const typingDelay = Math.random() * (40 - 30) + 10;
+
+			outputElement.innerHTML += text.charAt(index);
+			index++;
+
+			setTimeout(() => {
+				
+				if(index >= text.length) {
+					outputElement.classList.remove('paused');
+                    document.head.innerHTML += '<meta http-equiv="refresh" content="0;url=/en/home" />';
+				}
+				else {
+					typeWriter2(outputElement, text, index);
+				}
+			}, typingDelay);
+		}
+	}
+typeWriter2(firstLoadOutputElement, text, 0);
+</script>

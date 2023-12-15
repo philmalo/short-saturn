@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Terminal from '../../components/Terminal.astro';
+
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<Layout title={t("title.contact")}>
+    <main class="">
+		<Terminal
+            command="npm view npm contributors"
+            origin=".contact"
+            displayContent="block"
+        />
+        <p class="contact" transition:persist>dasdafasdasd</p>
+    </main>
+</Layout>

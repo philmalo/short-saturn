@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippe Malo</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>My Name lol</h1>
+            <h2>Web Dev</h2>
+        </div>
+        <nav>
+            <a href="/home">~</a>
+            <a href="/about">À propos</a>
+            <a href="/demos">Démos</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <p class="code">me@philippemalo.dev:~$ </p>
+    </main>
+    <footer>
+        <p>2023 Philippe Malo</p>
+        </footer>
+</body>
+</html>
