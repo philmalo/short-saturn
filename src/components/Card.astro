@@ -1,39 +1,40 @@
 ---
 import Navigation from "./Navigation.astro";
-import thumbnail from "../assets/deez_wines_thumbnail.png";
+// import thumbnail from "../assets/deez_wines_thumbnail.png";
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+// import { transitionEnabledOnThisPage } from "astro:transitions/client";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
+// const translatePath = useTranslatedPath(lang);
 
 interface CardProps {
 	title?: string;
 	body?: string;
 	link?: string;
-	labe?: string;
+	label?: string;
+	img?: string;
 }
 
 interface Props {
-	cards: CardProps[];
+	demos: CardProps[];
 }
 
-const { cards }: Props = Astro.props;
-
+const { demos }: Props = Astro.props;
+console.log(demos)
 ---
 
-{cards.map(card =>(
+{demos.map(site =>(
 	<article>
 		<h2>
-			{card.title}
+			{t(site.title)}
 			<span>&rarr;</span>
 		</h2>
-		<p>
-			{card.body}
+		<p set:html={t(site.body)}>
 		</p>
-		<img src={thumbnail.src} alt="">
+		<img src={site.img} alt="">
 		<Navigation links={[
-			{ href: card.link, dataset: "Explorer", label:"nav.explore"},
+			{ href: site.link, dataset: "Explorer", label:"nav.explore"},
 		]} />
 	</article>
 ))}

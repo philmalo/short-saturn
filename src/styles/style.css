@@ -47,6 +47,17 @@ a {
     cursor: url('../assets/old_pointer.cur'), pointer;
 }
 
+a.demo {
+    border: none;
+    color: blueviolet;
+}
+a.demo::before {
+    content: "[";
+}
+a.demo::after {
+    content: "]"
+}
+
 button {
     color: var(--terminal-color);
     border: 1px solid var(--terminal-color);
