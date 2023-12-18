@@ -1,4 +1,4 @@
-import deez from "./deez_wines_thumbnail.png";
+import deez from "./deez_wines.png";
 import yodio from "./yodio-white.svg";
 import placeholder from "./terminal_icon.svg";
 

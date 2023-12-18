@@ -25,7 +25,7 @@ export const ui = {
         'demo.url.yodio': "https://yodio.ca",
 
         'demo.title.deez': "Final college project",
-        'demo.body.deez': `Project built with Louis Roby and Émile Daigneault. A "mobile-first" web app to manage one's wine collection/cellars.`,
+        'demo.body.deez': `Project built with <a class="demo" href="#">Louis Roby</a> and <a class="demo" href="https://www.eknox.ca/">Émile Daigneault</a>. A "mobile-first" web app to manage one's wine collection/cellars.`,
         'demo.url.deez': "https://cyclonicks.ca",
 
         'demo.title.astro': "This portfolio",
@@ -48,7 +48,7 @@ export const ui = {
         'demo.url.yodio': 'https://yodio.ca',
 
         'demo.title.deez': "Projet final collégial",
-        'demo.body.deez': `Projet développé en collaboration avec Louis Roby et Émile Daigneault. Un site "mobile first" dédié à la gestion de collections de bouteilles de vin/celliers.`,
+        'demo.body.deez': `Projet développé en collaboration avec <a class="demo" href="#">Louis Roby</a> et <a class="demo" href="https://www.eknox.ca/">Émile Daigneault</a>. Un site "mobile first" dédié à la gestion de collections de bouteilles de vin/celliers.`,
         'demo.url.deez': 'https://cyclonicks.ca',
 
         'demo.title.astro': "Ce portefolio",
