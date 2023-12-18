@@ -18,7 +18,7 @@ const cardsData = [
         img: yodio.src,
     },
     {
-        link: 'https://philippemalo.dev',
+        link: '',
         title: "demo.title.astro",
         body: "demo.body.astro",
         label: "nav.explore",

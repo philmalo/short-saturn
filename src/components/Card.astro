@@ -30,8 +30,9 @@ const { demos }: Props = Astro.props;
 		<p set:html={t(site.body)}>
 		</p>
 		<img src={site.img} alt="">
+		{site.link &&
 		<Navigation links={[
 			{ href: site.link, dataset: "Explorer", label:"nav.explore"},
-		]} />
+		]} /> }
 	</article>
 ))}
