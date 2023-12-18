@@ -3,11 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Terminal from '../components/Terminal.astro';
 import Result from '../components/Result.astro';
 
-import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
 ---
 
 <Layout title={t("title.demos")}>
@@ -17,6 +16,7 @@ const translatePath = useTranslatedPath(lang);
             origin=".demos"
             displayContent="flex"
         />
-        <Result/>
+        <Result
+        />
     </main>
 </Layout>

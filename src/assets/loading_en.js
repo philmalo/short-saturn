@@ -1,3 +1,4 @@
+const year = new Date().getFullYear();
 const text = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,7 @@ const text = `<!DOCTYPE html>
         <p class="code">me@philippemalo.dev:~$ </p>
     </main>
     <footer>
-        <p>2023 Philippe Malo</p>
+        <p>${year} Philippe Malo</p>
     </footer>
 </body>
 </html>`;

@@ -10,24 +10,6 @@ const { command, origin, displayContent } = Astro.props;
 <p>me@philippemalo.dev:~$ <span class="code"></span></p>
 
 <script define:vars={{command, origin, displayContent}}>
-// const navigationButtons = document.querySelectorAll("a");
-
-//     // Itération à travers chaque élément <a> pour ajouter un écouteur d'événements
-//     navigationButtons.forEach(button => {
-//         button.addEventListener('click', (e) => {
-//             // Récupération de la valeur de l'attribut data-link de l'élément actuel
-//             const linkData = e.currentTarget.dataset.link;
-//             console.log("linkData", linkData)
-//             console.log("command", command)
-//             // Comparaison avec la variable command
-//             if (linkData === command) {
-//                 console.log("same?", command)
-//                 // Exécution de la fonction typewriter() si les valeurs correspondent
-//                 typewriter(command);
-//             }
-//         });
-//     });
-
     function typewriter(command) {
         const outputElement = document.querySelector('.code');
         console.log("test", outputElement)

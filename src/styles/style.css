@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     min-height: 100dvh;
     cursor: url('../assets/old_arrow.cur'), default;
+    margin: unset;
 
 }
 

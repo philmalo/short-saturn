@@ -1,12 +1,10 @@
 ---
 import Navigation from "./Navigation.astro";
-// import thumbnail from "../assets/deez_wines_thumbnail.png";
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
-// import { transitionEnabledOnThisPage } from "astro:transitions/client";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-// const translatePath = useTranslatedPath(lang);
+
 
 interface CardProps {
 	title?: string;
@@ -21,7 +19,6 @@ interface Props {
 }
 
 const { demos }: Props = Astro.props;
-console.log(demos)
 ---
 
 {demos.map(site =>(
