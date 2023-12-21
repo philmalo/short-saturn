@@ -26,7 +26,7 @@ export const ui = {
 
         'demo.title.deez': "Final college project",
         'demo.body.deez': `Project built with <a class="demo" href="#">Louis Roby</a> and <a class="demo" href="https://www.eknox.ca/">Émile Daigneault</a>. A "mobile-first" web app to manage one's wine collection/cellars.`,
-        'demo.url.deez': "https://cyclonicks.ca",
+        'demo.url.deez': "https://deez.philippemalo.dev",
 
         'demo.title.astro': "This portfolio",
         'demo.body.astro': `I have used this opportunity to learn a new framework for deploying static web pages. This is the end result. you can check out my repo <a class="demo" href="https://github.com/philmalo/short-saturn">here</a>.`,
@@ -49,7 +49,7 @@ export const ui = {
 
         'demo.title.deez': "Projet final collégial",
         'demo.body.deez': `Projet développé en collaboration avec <a class="demo" href="#">Louis Roby</a> et <a class="demo" href="https://www.eknox.ca/">Émile Daigneault</a>. Un site "mobile first" dédié à la gestion de collections de bouteilles de vin/celliers.`,
-        'demo.url.deez': 'https://cyclonicks.ca',
+        'demo.url.deez': 'https://deez.philippemalo.dev',
 
         'demo.title.astro': "Ce portefolio",
         'demo.body.astro': `J'ai profité de l'opportunité en créant ce site à l'aide du framework Astro. vous pouvez consulter mon dépôt github<a class="demo" href="https://github.com/philmalo/short-saturn">ici</a>.`,

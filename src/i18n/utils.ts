@@ -15,6 +15,10 @@ export function useTranslations(lang: keyof typeof ui) {
 export function useTranslatedPath(lang: keyof typeof ui) {
     return function translatePath(path: string, l: string = lang) {
         const pathName = path.replaceAll('/', '')
+                if (path.startsWith('https://')) {
+            // If it does, return the original path without modification
+            return path;
+        }
         const hasTranslation = defaultLang !== l && routes[l] !== undefined && routes[l][pathName] !== undefined
         const translatedPath = hasTranslation ? '/' + routes[l][pathName] : path
 
