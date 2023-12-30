@@ -2,10 +2,6 @@
 import Navigation from "./Navigation.astro";
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-
-
 interface CardProps {
 	title?: string;
 	body?: string;
@@ -13,11 +9,12 @@ interface CardProps {
 	label?: string;
 	img?: string;
 }
-
 interface Props {
 	demos: CardProps[];
 }
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const { demos }: Props = Astro.props;
 ---
 

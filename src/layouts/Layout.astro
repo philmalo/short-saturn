@@ -9,9 +9,10 @@ interface Props {
 	title: string;
 	description: string;
 }
+
 const { title, description } = Astro.props;
 const currentYear = new Date().getFullYear();
-const lang = getLangFromUrl(Astro.url);	
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>

@@ -1,3 +1,3 @@
 .lang>a{
-    background-color: #23262d;
+    background-color: var(--links-bg-color);
 }

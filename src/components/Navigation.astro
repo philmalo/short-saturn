@@ -2,21 +2,19 @@
 import Link from './Link.astro';
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
-
 interface LinkProps {
     id?: string;
     href?: string;
     dataset?: string;
     label?: string;
 }
-
 interface Props {
     links: LinkProps[];
 }
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 const { links }: Props = Astro.props;
 ---
 

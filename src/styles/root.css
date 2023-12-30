@@ -2,6 +2,7 @@
     /* colors */
     --terminal-color : rgb(74,246,38);
     --links-color : rgb(183, 125, 237);
+    --links-bg-color: rgb(35, 38, 45);
 
     /* spacing */
     --gutters-main : 30px;
