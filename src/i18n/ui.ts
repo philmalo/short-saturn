@@ -30,7 +30,7 @@ export const ui = {
         'nav.explore': 'Explore',
 
         //! home.astro
-        'homepage.text': `<section><p>Welcome to my humble home on the internet. This is a place where you will find information about myself and see examples of work I've done throughout my new career as a web developer.</p></section><section><p>I have chosen this path after 17 years as a dental technician to get more in line with my interests and passions</p></section>`,
+        'homepage.text': `<section><p>Welcome to my humble home on the internet. This is a place where you will find information about myself and see examples of work I've done throughout my new career as a web developer.</p></section><section><p>I have chosen this path after 17 years as a dental technician to get more in line with my interests and passions.</p></section>`,
 
         //! about.astro
         'about.text': `<section>
