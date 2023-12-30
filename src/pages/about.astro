@@ -2,20 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import Terminal from '../components/Terminal.astro';
 
-import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
 ---
 
-<Layout title={t("title.about")}>
-    <main class="">
+<Layout title={t("title.about")} description={t("description.about")}>
+    <main>
 		<Terminal
             command="whoami"
             origin=".about"
             displayContent="block"
         />
-        <p class="about" transition:persist>dsds</p>
+        <section class="about">
+            <article set:html={t("about.text")}></article>
+        </section>
     </main>
 </Layout>

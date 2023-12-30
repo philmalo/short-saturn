@@ -1,3 +1,8 @@
 .home{
     display: none;
+    margin: var(--gutters-main);
+}
+
+.home p {
+    max-width: 75ch;
 }

@@ -2,20 +2,22 @@
 import Layout from '../../layouts/Layout.astro';
 import Terminal from '../../components/Terminal.astro';
 
-import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
 ---
 
-<Layout title={t("title.contact")}>
-    <main class="">
+<Layout title={t("title.contact")} description={t("description.about")}>
+    <main>
 		<Terminal
             command="npm view npm contributors"
             origin=".contact"
             displayContent="block"
         />
-        <p class="contact" transition:persist>dasdafasdasd</p>
+        <section class="contact">
+            <article set:html={t("contact.text")}>
+            </article>
+        </section>
     </main>
 </Layout>

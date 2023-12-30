@@ -1,9 +1,13 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import text from "../../assets/loading_en.js";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<Layout title="Website in production...">
+<Layout title={t("title.index")} description={t("description.index")}>
     <pre class="code"></pre>
 </Layout>
 

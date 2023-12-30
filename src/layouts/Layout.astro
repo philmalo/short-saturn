@@ -2,23 +2,34 @@
 import '../styles/import.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { SEO } from 'astro-seo';
 
 interface Props {
 	title: string;
+	description: string;
 }
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 const currentYear = new Date().getFullYear();
 ---
 
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="description" content="Astro description" />
-	<meta name="viewport" content="width=device-width" />
-	<meta name="generator" content={Astro.generator} />
-	<link rel="icon" type="image/svg+xml" href="/terminal_icon.svg" />
-	<title>{title}</title>
+	<SEO
+	charset="UTF-8"
+	title={title}
+	description={description}
+	extend={{
+		meta: [
+			{name:"viewport", content:"width=device-width"},
+			{name:"author", content:"Philippe Malo"},
+			{name:"generator", content:Astro.generator}
+		],
+		link: [
+			{rel:"icon", href:"/terminal_icon.svg"}
+		],
+	}}
+	/>
 </head>
 <body class="crt">
 	<Header/>

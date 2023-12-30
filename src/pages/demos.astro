@@ -9,7 +9,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title={t("title.demos")}>
+<Layout title={t("title.demos")} description={t("description.demos")}>
     <main>
 		<Terminal
             command="lynx https://philippemalo.dev/"

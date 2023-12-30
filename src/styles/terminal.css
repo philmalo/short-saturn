@@ -1,0 +1,6 @@
+p.terminal{
+    border: 1px solid var(--terminal-color);
+    border-radius: 3px;
+    padding: 4px;
+    max-width: 100%;
+}

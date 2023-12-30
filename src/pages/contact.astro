@@ -9,13 +9,16 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
-<Layout title={t("title.contact")}>
-    <main class="">
+<Layout title={t("title.contact")} description={t("description.contact")}>
+    <main>
 		<Terminal
             command="npm view npm contributors"
             origin=".contact"
             displayContent="block"
         />
-        <p class="contact" transition:persist>dasdafasdasd</p>
+        <section class="contact">
+            <article set:html={t("contact.text")}>
+            </article>
+        </section>
     </main>
 </Layout>

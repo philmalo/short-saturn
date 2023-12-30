@@ -7,7 +7,7 @@ interface Props {
 const { command, origin, displayContent } = Astro.props;
 ---
 
-<p>me@philippemalo.dev:~$ <span class="code"></span></p>
+<p class="terminal">me@philippemalo.dev:~$ <span class="code"></span></p>
 
 <script define:vars={{command, origin, displayContent}}>
     function typewriter(command) {
