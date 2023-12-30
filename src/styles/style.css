@@ -74,7 +74,7 @@ img {
 }
 a.links {
     border: none;
-    color: blueviolet;
+    color: var(--links-color);
 }
 a.links::before {
     content: "[";
