@@ -8,6 +8,7 @@ interface CardProps {
 	link?: string;
 	label?: string;
 	img?: string;
+	alt?: string;
 }
 interface Props {
 	demos: CardProps[];
@@ -26,7 +27,7 @@ const { demos }: Props = Astro.props;
 		</h2>
 		<p set:html={t(site.body)}>
 		</p>
-		<img src={site.img} alt="">
+		<img src={site.img} alt={t(site.alt)}>
 		{site.link &&
 		<Navigation links={[
 			{ href: t(site.link), dataset: "Explorer", label:"nav.explore"},

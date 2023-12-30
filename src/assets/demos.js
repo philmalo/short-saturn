@@ -9,6 +9,7 @@ const cardsData = [
         body: "demo.body.deez",
         label: "nav.explore",
         img: deez.src,
+        alt: "demo.alt.deez",
     },
     {
         link: "demo.url.yodio",
@@ -16,6 +17,7 @@ const cardsData = [
         body: "demo.body.yodio",
         label: "nav.explore",
         img: yodio.src,
+        alt: "demo.alt.yodio"
     },
     {
         link: '',
@@ -23,6 +25,7 @@ const cardsData = [
         body: "demo.body.astro",
         label: "nav.explore",
         img: placeholder.src,
+        alt: "demo.alt.astro",
     }
 ];
 
