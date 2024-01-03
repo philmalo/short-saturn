@@ -69,17 +69,17 @@ export const ui = {
 
         //! demos.astro
         'demo.title.yodio': "Yodio migration to Astro",
-        'demo.body.yodio': `Weekend projet with a friend of mine,<a class="links" href="https://pascalmeunier.info/">Pascal Meunier</a>who built it originally with Laravel and wanted to convert it to<a class="links" href="https://astro.build">Astro</a>.`,
+        'demo.body.yodio': `Weekend projet with a friend of mine,<a class="links" href="https://pascalmeunier.info/">Pascal Meunier</a>who built it originally with Laravel and wanted to convert it to<a class="links" href="https://astro.build">Astro</a>.`,
         'demo.url.yodio': "https://yodio.ca",
         'demo.alt.yodio': "Yodio's logo",
 
         'demo.title.deez': "Final college project",
-        'demo.body.deez': `Project built with<a class="links" href="#">Louis Roby</a>and <a class="links" href="https://www.eknox.ca/">Émile Daigneault</a>. A "mobile-first" web app to manage one's wine collection/cellars.`,
+        'demo.body.deez': `Project built with<a class="links" href="#">Louis Roby</a>and <a class="links" href="https://www.eknox.ca/">Émile Daigneault</a>. A "mobile-first" web app to manage one's wine collection/cellars. Developed with the Laravel framework and using an SQL database.`,
         'demo.url.deez': "https://deez.philippemalo.dev",
         'demo.alt.deez': "Deez Wines' logo",
 
         'demo.title.astro': "This portfolio",
-        'demo.body.astro': `I have used this opportunity to learn a new framework for deploying static web pages. This is the end result. you can check out my repo<a class="links" href="https://github.com/philmalo/short-saturn">here</a>.`,
+        'demo.body.astro': `I have used this opportunity to learn the<a class="links" href="https://astro.build">Astro</a>framework for deploying static web pages. This is the end result. you can check out my repo<a class="links" href="https://github.com/philmalo/short-saturn">here</a>.`,
         'demo.alt.astro': "My website's logo",
 
         //! contact.astro
@@ -162,17 +162,17 @@ export const ui = {
 
         //? demos.astro
         'demo.title.yodio': "Migration Yodio vers Astro",
-        'demo.body.yodio': `Projet de fin de semaine en collaboration avec un ami,<a class="links" href="https://pascalmeunier.info/">Pascal Meunier</a>, qui a originalement développé le site avec Laravel et était intéressé à le transposer dans le framework<a class="links" href="https://astro.build">Astro</a>.`,
+        'demo.body.yodio': `Projet de fin de semaine en collaboration avec un ami,<a class="links" href="https://pascalmeunier.info/">Pascal Meunier</a>, qui a originalement développé le site avec Laravel et était intéressé à le transposer dans le framework<a class="links" href="https://astro.build">Astro</a>.`,
         'demo.url.yodio': 'https://yodio.ca',
         'demo.alt.yodio': 'logo de yodio.ca',
 
         'demo.title.deez': "Projet final collégial",
-        'demo.body.deez': `Projet développé en collaboration avec <a class="links" href="#">Louis Roby</a> et <a class="links" href="https://www.eknox.ca/">Émile Daigneault</a>. Un site "mobile first" dédié à la gestion de collections de bouteilles de vin/celliers.`,
+        'demo.body.deez': `Projet développé en collaboration avec <a class="links" href="#">Louis Roby</a> et <a class="links" href="https://www.eknox.ca/">Émile Daigneault</a>. Un site "mobile first" dédié à la gestion de collections de bouteilles de vin/celliers. Développé à l'aide de Laravel et avec base de données SQL,`,
         'demo.url.deez': 'https://deez.philippemalo.dev',
         'demo.alt.deez': 'logo de Deez Wines',
 
         'demo.title.astro': "Ce portefolio",
-        'demo.body.astro': `J'ai profité de l'opportunité en créant ce site à l'aide du framework Astro. vous pouvez consulter mon dépôt github<a class="links" href="https://github.com/philmalo/short-saturn">ici</a>.`,
+        'demo.body.astro': `J'ai profité de l'opportunité en créant ce site à l'aide du framework<a class="links" href="https://astro.build">Astro</a>. vous pouvez consulter mon dépôt github<a class="links" href="https://github.com/philmalo/short-saturn">ici</a>.`,
         'demo.alt.astro': 'logo de mon site',
 
         //? contact.astro
