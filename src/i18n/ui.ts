@@ -167,7 +167,7 @@ export const ui = {
         'demo.alt.yodio': 'logo de yodio.ca',
 
         'demo.title.deez': "Projet final collégial",
-        'demo.body.deez': `Projet développé en collaboration avec <a class="links" href="https://www.linkedin.com/in/louis-roby-619899a5/">Louis Roby</a> et <a class="links" href="https://www.eknox.ca/">Émile Daigneault</a>. Un site "mobile first" dédié à la gestion de collections de bouteilles de vin/celliers. Développé à l'aide de Laravel et avec base de données SQL. Explorez le dépôt <a class="links" href="https://github.com/philmalo/deez">ici</a>.`,
+        'demo.body.deez': `Projet développé en collaboration avec <a class="links" href="https://www.linkedin.com/in/louis-roby-619899a5/">Louis Roby</a> et <a class="links" href="https://www.eknox.ca/">Émile Daigneault</a>. Un site "mobile first" dédié à la gestion de collections de bouteilles de vin/celliers. Développé à l'aide de Laravel et avec base de données SQL. Explorez le dépôt <a class="links" href="https://github.com/philmalo/deez">ici</a>.`,
         'demo.url.deez': 'https://deez.philippemalo.dev',
         'demo.alt.deez': 'logo de Deez Wines',
 
