@@ -1,3 +1,16 @@
+@import "root.css";
+@import "font.css";
+@import "hidden.css";
+@import "crt.css";
+@import "code.css";
+@import "animations.css";
+@import "lang.css";
+@import "demos.css";
+@import "about.css";
+@import "contact.css";
+@import "home.css";
+@import "terminal.css";
+
 html, pre {
     font-family: "JetBrainsMono", sans-serif;
     color: var(--terminal-color);
