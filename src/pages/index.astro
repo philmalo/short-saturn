@@ -8,7 +8,7 @@ const t = useTranslations(lang);
 ---
 
 <Layout title={t("title.index")} description={t("description.index")}>
-    <pre class="code"></pre>
+    <pre class="code"><span class="cursor">&#x2588;</span></pre>
 </Layout>
 
 <script is:inline define:vars={{ text }}>
@@ -27,7 +27,6 @@ const t = useTranslations(lang);
             setTimeout(() => {
                 if (index >= text.length) {
                     outputElement.classList.remove("paused");
-
                     document.head.innerHTML +=
                         '<meta http-equiv="refresh" content="0;url=/home" />';
                 }

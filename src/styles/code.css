@@ -8,10 +8,14 @@
     animation: none;
 }
 
-.code::after {
+/* .code::after {
     content: "\2588";
     animation-name: blink, textShadow;
     animation-duration: 1.2s, 1.6s;
     animation-iteration-count: infinite;
     animation-direction: step-end, normal;
+} */
+
+.code{
+    opacity: 1;
 }
