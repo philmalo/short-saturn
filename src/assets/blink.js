@@ -7,7 +7,7 @@ function blink() {
         repeat: -1,
         ease: "none",
         yoyo: true,
-        duration: 0.5
+        duration: 0.7
     });
 }
 

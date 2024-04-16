@@ -14,9 +14,16 @@ const t = useTranslations(lang);
             origin=".home"
             displayContent="block"
         />
+        <div class="cover"></div>
         <section class="home">
             <article set:html={t("homepage.text")}>
             </article>
         </section>
     </main>
 </Layout>
+
+<script>
+    import displayResults from "../../assets/displayResults";
+
+    displayResults(1.7,0.2);
+</script>

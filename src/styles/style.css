@@ -10,6 +10,7 @@
 @import "contact.css";
 @import "home.css";
 @import "terminal.css";
+@import "cover.css";
 
 html, pre {
     font-family: "JetBrainsMono", sans-serif;
@@ -77,6 +78,8 @@ button {
 
 /* ================================= MAIN ================================= */
 main {
+    position: relative;
+    overflow: hidden;
     flex-grow: 1;
     margin: var(--gutters-main);
 }

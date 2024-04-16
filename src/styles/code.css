@@ -1,12 +1,12 @@
 /* Blink cursor effect taken from https://codepen.io/alandunning/pen/RWRrEW */
 
-.code.paused::after {
+/* .code.paused::after {
     animation-name: textShadow;
 }
 
 .code.paused::after {
     animation: none;
-}
+} */
 
 /* .code::after {
     content: "\2588";
@@ -16,6 +16,6 @@
     animation-direction: step-end, normal;
 } */
 
-.code{
+/* .code{
     opacity: 1;
-}
+} */

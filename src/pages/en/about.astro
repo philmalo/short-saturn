@@ -14,8 +14,15 @@ const t = useTranslations(lang);
             origin=".about"
             displayContent="block"
         />
+        <div class="cover"></div>
         <section class="about">
             <article set:html={t("about.text")}></article>
         </section>
     </main>
 </Layout>
+
+<script>
+    import displayResults from "../../assets/displayResults.js";
+
+    displayResults(1.7,0.3);
+</script>

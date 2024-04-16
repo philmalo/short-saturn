@@ -8,11 +8,11 @@ const t = useTranslations(lang);
 ---
 
 <Layout title={t("title.index")} description={t("description.index")}>
-    <pre class="code"><span class="cursor">&#x2588;</span></pre>
+    <pre class="code"><span class="textContent"></span><span class="cursor">&#x2588;</span></pre>
 </Layout>
 
 <script is:inline define:vars={{ text }}>
-    const firstLoadOutputElement = document.querySelector("pre.code");
+    const firstLoadOutputElement = document.querySelector(".textContent");
 
     document.querySelector("header").classList.add("hidden");
     document.querySelector("footer").classList.add("hidden");

@@ -24,10 +24,7 @@ const { command, origin, displayContent } = Astro.props;
             } else if(index >= command.length){
                 clearInterval(typingInterval);
                 outputElement.classList.remove('paused');
-                const originElement = document.querySelector(origin);
-                setTimeout(()=> {
-                    originElement.style.display = displayContent
-                }, 300)
+                document.querySelector(origin).style.display = displayContent
             }
         }, Math.random() * (40 - 30) + 10);
     }

@@ -32,15 +32,6 @@ function textShadowsCrt() {
             textShadow: shadow,
         }, index * 0.08);
     });
-    // gsap.to(".crt", {
-    //     duration: 1.6,
-    //     repeat: -1,
-    //     ease: "none",
-    //     keyframes: textShadows.map((shadow, index) => ({
-    //         textShadow: shadow,
-    //         "<": (index / (textShadows.length - 1))
-    //     }))
-    // });
 }
 
 export default textShadowsCrt;
