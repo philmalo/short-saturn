@@ -1,9 +1,5 @@
 /* Flicker and textShadow CRT effect taken from https://aleclownes.com/2017/02/01/crt-display.html */
 
-/* .crt {
-    animation: textShadow 1.6s infinite;
-} */
-
 .crt::before {
     content: " ";
     display: block;
@@ -30,5 +26,4 @@
     opacity  : var(--flicker);
     z-index: 2;
     pointer-events: none;
-    /* animation: flicker 0.6s infinite; */
 }
