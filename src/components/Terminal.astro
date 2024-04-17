@@ -10,10 +10,6 @@ const { command, origin, displayContent } = Astro.props;
 
 <p class="terminal">me@philippemalo.dev:~$ <span class="code"></span><span class="cursor">&#x2588;</span></p>
 
-<script>
-    import blink from "../assets/blink.js";
-    blink();
-</script>
 <script define:vars={{command, origin, displayContent}}>
     function typewriter(command) {
         const outputElement = document.querySelector('.code');

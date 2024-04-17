@@ -42,6 +42,7 @@ const lang = getLangFromUrl(Astro.url);
 </html>
 
 <script>
+	import blink from "../assets/blink.js";
 	import textShadowsCrt from "../assets/textShadows.js";
 	import flicker from "../assets/flickerCrt.js";
 	import displayResults from "../assets/displayResults.js";
@@ -50,6 +51,7 @@ const lang = getLangFromUrl(Astro.url);
 	const duration = cover.dataset.duration;
 	const delay = cover.dataset.delay
 
+	blink();
 	textShadowsCrt();
 	flicker();
     displayResults(duration, delay);
