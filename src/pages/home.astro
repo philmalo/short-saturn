@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Terminal from '../components/Terminal.astro';
+import Home from '../components/Home.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -15,10 +16,8 @@ const t = useTranslations(lang);
             displayContent="flex"
         />
         <div class="cover"></div>
-        <section class="home">
-            <article set:html={t("homepage.text")}>
-            </article>
-        </section>
+        <Home
+        />
     </main>
 </Layout>
 
