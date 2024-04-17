@@ -29,7 +29,7 @@ const text = `<!DOCTYPE html>
         <p class="code">me@philippemalo.dev:~$ </p>
     </main>
     <footer>
-        <p>${year} Philippe Malo</p>
+        <p>2023 - ${year} Philippe Malo</p>
     </footer>
 </body>
 </html>`;
