@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Terminal from '../../components/Terminal.astro';
+import ContactContent from '../../components/ContactContent.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -14,10 +15,7 @@ const t = useTranslations(lang);
             origin=".contact"
             displayContent="block"
         />
-        <div class="cover" data-duration=1.7 data-delay=0.6></div>
-        <section class="contact">
-            <article set:html={t("contact.text")}>
-            </article>
-        </section>
+        <ContactContent
+        />
     </main>
 </Layout>

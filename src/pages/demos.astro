@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Terminal from '../components/Terminal.astro';
-import Result from '../components/Result.astro';
+import DemosContent from '../components/DemosContent.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -15,15 +15,7 @@ const t = useTranslations(lang);
             origin=".demos"
             displayContent="flex"
         />
-        <div class="cover" data-duration=1.7 data-delay=0.9></div>
-        <Result
+        <DemosContent
         />
     </main>
 </Layout>
-
-
-<!-- <script>
-    import displayResults from "../assets/displayResults.js";
-    console.log("hello je load? demos")
-    displayResults(1.7,0.9);
-</script> -->

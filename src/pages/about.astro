@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Terminal from '../components/Terminal.astro';
+import AboutContent from '../components/AboutContent.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -14,15 +15,7 @@ const t = useTranslations(lang);
             origin=".about"
             displayContent="block"
         />
-        <div class="cover" data-duration=1.7 data-delay=0.3></div>
-        <section class="about">
-            <article set:html={t("about.text")}></article>
-        </section>
+        <AboutContent
+        />
     </main>
 </Layout>
-
-<!-- <script>
-    import displayResults from "../assets/displayResults.js";
-
-    displayResults(1.7,0.3);
-</script> -->

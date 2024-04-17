@@ -1,8 +1,13 @@
 ---
 import Card from "./Card.astro";
 import demos from "../assets/demos.js"
+import ContentCover from "./ContentCover.astro";
 ---
 
+<ContentCover
+    duration={1.7}
+    delay={0.7}
+/>
 <section class="demos">
     <Card demos={demos}/>
 </section>

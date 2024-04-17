@@ -1,0 +1,16 @@
+---
+import ContentCover from './ContentCover.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<ContentCover
+    duration={1.7}
+    delay={0.2}
+/>
+<section class="home">
+    <article set:html={t("homepage.text")}>
+    </article>
+</section>
