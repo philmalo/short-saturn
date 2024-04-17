@@ -14,16 +14,10 @@ const t = useTranslations(lang);
             origin=".contact"
             displayContent="block"
         />
-        <div class="cover"></div>
+        <div class="cover" data-duration=1.7 data-delay=0.6></div>
         <section class="contact">
             <article set:html={t("contact.text")}>
             </article>
         </section>
     </main>
 </Layout>
-
-<script>
-    import displayResults from "../../assets/displayResults";
-
-    displayResults(1.7,0.6);
-</script>

@@ -15,7 +15,7 @@ const translatePath = useTranslatedPath(lang);
             origin=".contact"
             displayContent="block"
         />
-        <div class="cover"></div>
+        <div class="cover" data-duration=1.7 data-delay=0.6></div>
         <section class="contact">
             <article set:html={t("contact.text")}>
             </article>
@@ -23,8 +23,8 @@ const translatePath = useTranslatedPath(lang);
     </main>
 </Layout>
 
-<script>
+<!-- <script>
     import displayResults from "../assets/displayResults.js";
 
     displayResults(1.7,0.6);
-</script>
+</script> -->

@@ -1,28 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Terminal from '../components/Terminal.astro';
-import Home from '../components/Home.astro';
+import HomeContent from '../components/Home.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import type { Code, Debug } from 'astro:components';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const revealProps = { duration: 1.7, delay: 0.9 };
 ---
 
-<Layout title={t("title.home")} description={t("description.home")}>
+<Layout title={t("title.home")} description={t("description.home")} {...revealProps}>
     <main>
 		<Terminal
             command="cd ~"
             origin=".home"
             displayContent="flex"
         />
-        <div class="cover"></div>
-        <Home
+        <div class="cover" data-duration=1.7 data-delay=0.2 ></div>
+        <HomeContent
         />
     </main>
 </Layout>
 
-<script>
+<!-- <script>
     import displayResults from "../assets/displayResults.js";
     console.log("hello je load? home");
     displayResults(1.7,0.2);
-</script>
+</script> -->
