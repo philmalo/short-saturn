@@ -23,7 +23,7 @@
     bottom: 0;
     right: 0;
     background: rgba(18, 16, 16, 0.1);
-    opacity  : var(--flicker);
+    opacity : var(--flicker);
     z-index: 2;
     pointer-events: none;
 }
