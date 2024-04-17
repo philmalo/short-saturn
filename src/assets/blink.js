@@ -1,7 +1,6 @@
 import { gsap } from "gsap";
 
 function blink() {
-    // const tl = gsap.timeline({repeat: -1})
     gsap.to(".cursor",{
         opacity: 0,
         repeat: -1,
